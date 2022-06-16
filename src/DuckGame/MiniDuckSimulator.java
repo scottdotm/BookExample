@@ -10,14 +10,30 @@ package DuckGame;
  * @author Scott
  */
 public class MiniDuckSimulator {
+
     public static void main(String[] args) {
         Duck mallard = new MallardDuck();
+        mallard.display();
         mallard.performQuack();
         mallard.performFly();
-        
+        mallard.swim();
+
+        System.out.println("------------------");
+
         Duck model = new ModelDuck();
+        model.display();
         model.performFly();
         model.setFlyBehavior(new FlyRocketPowered());
         model.performFly();
+        model.swim();
+
+        System.out.println("------------------");
+
+        Duck teal = new TealDuck();
+        teal.display();
+        teal.performQuack();
+        teal.performFly();
+        teal.swim();
+
     }
 }
